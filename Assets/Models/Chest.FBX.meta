@@ -5,6 +5,21 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chest Base 2
+    second: {fileID: 2100000, guid: 03710b2057fdd6a47a191123a00dbf2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lid 2
+    second: {fileID: 2100000, guid: 76d72fdb5cf838347b755a21f3ffbaad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lock 2
+    second: {fileID: 2100000, guid: c37e04588243ef54eac0aa511782b316, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Chest Texture 2
