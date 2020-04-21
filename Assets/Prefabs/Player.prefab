@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 595862905831572343}
   - component: {fileID: 595862905831572341}
   - component: {fileID: 595862905831572342}
-  - component: {fileID: 595862905831572337}
+  - component: {fileID: 1532105857821352350}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -189,7 +189,7 @@ MonoBehaviour:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
---- !u!114 &595862905831572337
+--- !u!114 &1532105857821352350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivity: 100
-  playerBody: {fileID: 595862906185623469}
+  playerBody: {fileID: 595862906185623475}
 --- !u!1 &595862906185623475
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 595862906185623469}
   - component: {fileID: 595862906185623468}
-  - component: {fileID: 595862906185623470}
+  - component: {fileID: 3156711086260054575}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -254,7 +254,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &595862906185623470
+--- !u!114 &3156711086260054575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,6 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  controller: {fileID: 0}
   gravity: -9.81
+  canMove: 0
+  controller: {fileID: 0}
   cam: {fileID: 595862905831572343}
