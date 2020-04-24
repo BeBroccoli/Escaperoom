@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 10.0f;
     public float gravity = -9.81f;
     public bool canMove;
+    public bool carrying;
 
     public CharacterController controller;
     
@@ -21,8 +22,6 @@ public class PlayerController : MonoBehaviour
     /////////////////////
     private float pickupLength = 3;
     private float smooth = 5f;
-
-    private bool carrying;
 
     private Vector3 movement;
     private Vector3 velocity;
