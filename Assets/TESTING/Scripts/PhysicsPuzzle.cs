@@ -8,6 +8,7 @@ public class PhysicsPuzzle : MonoBehaviour
     public Material redMat;
     public Material greenMat;
     public GameObject player;
+    public List<GameObject> questItems;
 
     private Renderer r;
     private PlayerController pc;
@@ -22,9 +23,13 @@ public class PhysicsPuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
+    //for (int i = 0; i <= questItems.Count; i++)
+
+
+    #region TESTING
     private void OnTriggerStay(Collider other)
     {
         if(other.CompareTag("puzzleItem") && !pc.carrying)
@@ -41,3 +46,5 @@ public class PhysicsPuzzle : MonoBehaviour
         }
     }
 }
+
+#endregion
