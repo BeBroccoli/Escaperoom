@@ -615,6 +615,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &879897360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879897357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a373fc33d375c543afd2a1eaa3b1cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questActive: 0
 --- !u!1 &1031973860
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,7 +737,7 @@ MonoBehaviour:
   redMat: {fileID: 2100000, guid: 08f3b82b0b9b02d4295902f49bd679b1, type: 2}
   greenMat: {fileID: 2100000, guid: cf600ddbca076f0468dc6a8ac0daa5a3, type: 2}
   player: {fileID: 1736241580}
-  questItems:
+  questItemList:
   - {fileID: 1262085372}
   - {fileID: 879897357}
 --- !u!1001 &1209707189
@@ -743,6 +756,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4842163724142008162, guid: b1aa3485a29563541b45ad14fb6271e6,
+        type: 3}
+      propertyPath: m_TagString
+      value: puzzleItem
       objectReference: {fileID: 0}
     - target: {fileID: 8460446862062822769, guid: b1aa3485a29563541b45ad14fb6271e6,
         type: 3}
@@ -814,6 +832,7 @@ GameObject:
   - component: {fileID: 1262085374}
   - component: {fileID: 1262085373}
   - component: {fileID: 1262085377}
+  - component: {fileID: 1262085378}
   m_Layer: 10
   m_Name: Cube (1)
   m_TagString: puzzleItem
@@ -911,6 +930,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1262085378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262085372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a373fc33d375c543afd2a1eaa3b1cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questActive: 0
 --- !u!1001 &1442740307
 PrefabInstance:
   m_ObjectHideFlags: 0

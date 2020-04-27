@@ -8,7 +8,7 @@ public class PhysicsPuzzle : MonoBehaviour
     public Material redMat;
     public Material greenMat;
     public GameObject player;
-    public List<GameObject> questItems;
+    public List<GameObject> questItemList;
 
     private Renderer r;
     private PlayerController pc;
@@ -18,6 +18,9 @@ public class PhysicsPuzzle : MonoBehaviour
     {
         r = GetComponent<Renderer>();
         pc = player.GetComponent<PlayerController>();
+
+        //for (int i = 0; i <= questItemList.Count; i++)
+
     }
 
     // Update is called once per frame
@@ -26,7 +29,21 @@ public class PhysicsPuzzle : MonoBehaviour
 
     }
 
-    //for (int i = 0; i <= questItems.Count; i++)
+    private void OnTriggerEnter(Collider other)
+    {
+        QuestItem oqc = other.GetComponent<QuestItem>();
+        if(oqc.questActive)
+        {
+            print("Hey");
+            oqc.setQuestInactive();
+        }
+    }
+
+    private void questComplete()
+    {
+
+    }
+
 
 
     #region TESTING
