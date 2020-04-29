@@ -615,19 +615,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &879897360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879897357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a373fc33d375c543afd2a1eaa3b1cb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questActive: 0
 --- !u!1 &1031973860
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,7 +703,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031973860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.17, y: 0.43, z: 3.17}
+  m_LocalPosition: {x: 3.17, y: 0.54, z: 3.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -740,6 +727,7 @@ MonoBehaviour:
   questItemList:
   - {fileID: 1262085372}
   - {fileID: 879897357}
+  questProgress: 0
 --- !u!1001 &1209707189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -832,7 +820,6 @@ GameObject:
   - component: {fileID: 1262085374}
   - component: {fileID: 1262085373}
   - component: {fileID: 1262085377}
-  - component: {fileID: 1262085378}
   m_Layer: 10
   m_Name: Cube (1)
   m_TagString: puzzleItem
@@ -930,19 +917,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1262085378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262085372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a373fc33d375c543afd2a1eaa3b1cb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questActive: 0
 --- !u!1001 &1442740307
 PrefabInstance:
   m_ObjectHideFlags: 0
