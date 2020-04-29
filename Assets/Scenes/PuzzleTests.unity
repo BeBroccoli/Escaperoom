@@ -726,8 +726,22 @@ MonoBehaviour:
   player: {fileID: 1736241580}
   questItemList:
   - {fileID: 1262085372}
-  - {fileID: 879897357}
   questProgress: 0
+  puzzleName: Cube Puzzle
+  puzzleComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1463786204}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1209707189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1055,6 +1069,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b76e417707a660740850f099e4d78018, type: 3}
+--- !u!1 &1463786204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7443249928951736497, guid: b76e417707a660740850f099e4d78018,
+    type: 3}
+  m_PrefabInstance: {fileID: 1463786203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1635994367
 GameObject:
   m_ObjectHideFlags: 1

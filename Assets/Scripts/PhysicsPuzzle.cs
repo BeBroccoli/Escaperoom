@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class PhysicsPuzzle : MonoBehaviour
@@ -10,6 +11,8 @@ public class PhysicsPuzzle : MonoBehaviour
     public GameObject player;
     public List<GameObject> questItemList;
     public int questProgress;
+    public string puzzleName;
+    public UnityEvent puzzleComplete;
 
     private Renderer r;
     private PlayerController pc;
@@ -31,6 +34,7 @@ public class PhysicsPuzzle : MonoBehaviour
             o.AddComponent<QuestItem>();
             QuestItem oq = o.GetComponent<QuestItem>();
             oq.setQuestActive();
+            oq.questName = puzzleName;
         }
 
     }
@@ -42,48 +46,43 @@ public class PhysicsPuzzle : MonoBehaviour
     }
 
     //Check to see if a/any puzzle items are inside the "goal"
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if(other.CompareTag("puzzleItem"))
+        if(other.CompareTag("puzzleItem") && !pc.carrying)
         {
             //Get the quest item component so we can check if the current item's quest is active
             QuestItem oqc = other.GetComponent<QuestItem>();
-            if (oqc.questActive)
+            //Make sure the collider has a quest component
+            if(oqc != null)
             {
-                //Update the progress to completion, and disable the quest item
-                questProgress--;
-                oqc.setQuestInactive();
+                if (oqc.questActive && oqc.questName == puzzleName)
+                {
+                    //Update the progress to completion, and disable the quest item
+                    questProgress--;
+                    oqc.setQuestInactive();
+                }
             }
         }
     }
+
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.CompareTag("puzzleItem"))
+    //    {
+    //        //Debug material change
+    //        r.material = redMat;
+    //    }
+    //}
 
     //Used to check if the puzzle is completed
     private void questCheck()
     {
         if(questProgress <= 0)
         {
-            print("Well Done!");
-        }
-    }
+            puzzleComplete.Invoke();
 
-
-
-    #region TESTING
-    private void OnTriggerStay(Collider other)
-    {
-        if(other.CompareTag("puzzleItem") && !pc.carrying && questProgress <= 0)
-        {
+            //Debug material change
             r.material = greenMat;
         }
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if(other.CompareTag("puzzleItem"))
-        {
-            r.material = redMat;
-        }
-    }
 }
-
-#endregion
