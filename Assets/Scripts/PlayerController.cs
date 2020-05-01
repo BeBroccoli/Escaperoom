@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour
         //Make sure the player can move again after dropping object, and check for pickups again
         else if(!carrying)
         {
+            useItem();
             canMove = true;
             itemPickup();
         }
@@ -156,4 +157,17 @@ public class PlayerController : MonoBehaviour
         rb.AddTorque(Vector3.right * torque * turnY * Time.deltaTime);
     }
 
+    private void useItem()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Raycast and look for a collider with the physicsItem layer (layer 10)
+            int layerMask = 1 << 11;
+            RaycastHit hit;
+            if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, pickupLength, layerMask))
+            {
+                hit.transform.SendMessage("HitByRay");
+            }
+        }
+    }
 }
