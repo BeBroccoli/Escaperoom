@@ -173,6 +173,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 7443249928951736497}
+  animationBool: active
+  onUse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6794200845078222103}
+        m_MethodName: setAnimBool
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: active
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &3175777041872741807
 BoxCollider:
   m_ObjectHideFlags: 0
