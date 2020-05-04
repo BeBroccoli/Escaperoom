@@ -721,8 +721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a169f6350421364b85b3c5487fdc3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMat: {fileID: 2100000, guid: 08f3b82b0b9b02d4295902f49bd679b1, type: 2}
-  greenMat: {fileID: 2100000, guid: cf600ddbca076f0468dc6a8ac0daa5a3, type: 2}
   player: {fileID: 1736241580}
   questItemList:
   - {fileID: 1262085372}
@@ -993,73 +991,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.40500003
       objectReference: {fileID: 0}
-    - target: {fileID: 999709242290497417, guid: 63f3e76bc544a8d4ab40fada7b4c5d31,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 8000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1316061337199187872, guid: 63f3e76bc544a8d4ab40fada7b4c5d31,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 4467215617346638379, guid: 63f3e76bc544a8d4ab40fada7b4c5d31,
         type: 3}
       propertyPath: m_Name
       value: Chest
       objectReference: {fileID: 0}
-    - target: {fileID: 8683332162863641494, guid: 63f3e76bc544a8d4ab40fada7b4c5d31,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.07150739
-      objectReference: {fileID: 0}
-    - target: {fileID: 8683332162863641494, guid: 63f3e76bc544a8d4ab40fada7b4c5d31,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7040336
-      objectReference: {fileID: 0}
-    - target: {fileID: 8683332162863641494, guid: 63f3e76bc544a8d4ab40fada7b4c5d31,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.06871384
-      objectReference: {fileID: 0}
-    - target: {fileID: 8683332162863641494, guid: 63f3e76bc544a8d4ab40fada7b4c5d31,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.70320827
-      objectReference: {fileID: 0}
-    - target: {fileID: 8683332162863641494, guid: 63f3e76bc544a8d4ab40fada7b4c5d31,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 11.3810005
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f3e76bc544a8d4ab40fada7b4c5d31, type: 3}
---- !u!1 &1383351536 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4467215617346638379, guid: 63f3e76bc544a8d4ab40fada7b4c5d31,
-    type: 3}
-  m_PrefabInstance: {fileID: 1383351535}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1383351537
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383351536}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 65c99425d48347c4eb488dd5f8ae2fc3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1442740307
 PrefabInstance:
   m_ObjectHideFlags: 0
