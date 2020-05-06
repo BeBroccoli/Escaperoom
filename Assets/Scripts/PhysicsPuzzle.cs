@@ -5,21 +5,25 @@ using UnityEngine;
 
 public class PhysicsPuzzle : MonoBehaviour
 {
-    public GameObject player;
+    [SerializeField]
+    GameObject Item;
+
+   
     public List<GameObject> questItemList;
     public int questProgress;
     public string puzzleName;
     public UnityEvent puzzleComplete;
+    public string animationBool;
 
-    private PlayerController pc;
-
+    
+    private Animator Anim;
 
 
 
     // Start is called before the first frame update
     void OnEnable()
     {
-        pc = player.GetComponent<PlayerController>();
+        
 
         //Always have the amount of required objects be the starting progress of the puzzle
         questProgress = questItemList.Count;
@@ -31,6 +35,10 @@ public class PhysicsPuzzle : MonoBehaviour
             QuestItem oq = o.GetComponent<QuestItem>();
             oq.setQuestActive();
             oq.questName = puzzleName;
+        }
+        if (Item != null)
+        {
+            Anim = Item.GetComponent<Animator>();
         }
 
     }
@@ -47,7 +55,7 @@ public class PhysicsPuzzle : MonoBehaviour
     //Check to see if a/any puzzle items are inside the "goal"
     private void OnTriggerStay(Collider other)
     {
-        if(other.CompareTag("puzzleItem") && !pc.carrying)
+        if(other.CompareTag("puzzleItem"))
         {
             //Get the quest item component so we can check if the current item's quest is active
             QuestItem oqc = other.GetComponent<QuestItem>();
@@ -72,4 +80,18 @@ public class PhysicsPuzzle : MonoBehaviour
             puzzleComplete.Invoke();
         }
     }
+
+    public void setAnimBool()
+    {
+        if (!Anim.GetBool(animationBool))
+        {
+            Anim.SetBool(animationBool, true);
+        }
+
+        else if (Anim.GetBool(animationBool))
+        {
+            Anim.SetBool(animationBool, false);
+        }
+    }
+
 }

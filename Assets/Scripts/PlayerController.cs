@@ -166,8 +166,12 @@ public class PlayerController : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, pickupLength, layerMask))
             {
+            
                 hit.transform.SendMessage("HitByRay");
             }
+
+          
+
         }
     }
 }
