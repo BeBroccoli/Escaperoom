@@ -615,6 +615,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &879897363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879897357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 829ecea60a4fa4140af08cad0b312b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 0}
+  MouseImage: {fileID: 2068547006}
+  animationBool: 
+  onUse:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1031973860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,6 +1151,11 @@ PrefabInstance:
     - target: {fileID: 6794200845078222103, guid: b76e417707a660740850f099e4d78018,
         type: 3}
       propertyPath: customImage
+      value: 
+      objectReference: {fileID: 2068547006}
+    - target: {fileID: 6794200845078222103, guid: b76e417707a660740850f099e4d78018,
+        type: 3}
+      propertyPath: MouseImage
       value: 
       objectReference: {fileID: 2068547006}
     - target: {fileID: 7443249928951736497, guid: b76e417707a660740850f099e4d78018,

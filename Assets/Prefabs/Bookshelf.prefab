@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 7443249928951736497}
-  customImage: {fileID: 0}
+  MouseImage: {fileID: 0}
   animationBool: active
   onUse:
     m_PersistentCalls:
@@ -200,8 +200,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.075805545, y: 0.32679155, z: 0.3744971}
-  m_Center: {x: -0.00000093021094, y: -0.000000008714479, z: 0.18724853}
+  m_Size: {x: 0.075805545, y: 0.453278, z: 0.3744971}
+  m_Center: {x: -0.0000009313375, y: -0.06324318, z: 0.18724853}
 --- !u!1 &1662783970616139794
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,8 +696,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9187754, y: 0.5962206, z: 2.1060686}
-  m_Center: {x: -0.0000008329989, y: -0.050170396, z: 1.0530337}
+  m_Size: {x: 1.9187754, y: 0.47270823, z: 2.1060686}
+  m_Center: {x: -0.00000079471573, y: 0.011585911, z: 1.0530337}
 --- !u!1 &6251656389867785384
 GameObject:
   m_ObjectHideFlags: 0
