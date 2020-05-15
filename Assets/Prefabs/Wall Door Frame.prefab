@@ -239,6 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 539473550230821920}
+  MouseImage: {fileID: 0}
   animationBool: active
   onUse:
     m_PersistentCalls:
