@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 7443249928951736497}
+  customImage: {fileID: 0}
   animationBool: active
   onUse:
     m_PersistentCalls:

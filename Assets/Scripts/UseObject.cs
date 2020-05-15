@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class UseObject : MonoBehaviour
 {
     [SerializeField]
     GameObject Item;
+    [SerializeField]
+    private Image customImage;
 
     public string animationBool;
     public UnityEvent onUse;
@@ -43,5 +47,14 @@ public class UseObject : MonoBehaviour
         }
     }
 
+    private void OnMouseOver()
+    {
+        Debug.Log("HEY");
+        customImage.enabled = true;
+    }
 
+    private void OnMouseExit()
+    {
+        customImage.enabled = false;
+    }
 }
