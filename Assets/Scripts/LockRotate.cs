@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class LockRotate : MonoBehaviour
 {
+    [SerializeField]
+    private Image MouseImage;
+
     public static event Action<string, int> Rotated = delegate { };
 
     private bool coroutineAllowed;
@@ -48,5 +52,15 @@ public class LockRotate : MonoBehaviour
         Rotated(name, numberShown);
     }
 
-  
+    private void OnMouseOver()
+    {
+        MouseImage.enabled = true;
+    }
+
+    private void OnMouseExit()
+    {
+        MouseImage.enabled = false;
+    }
+
+
 }
