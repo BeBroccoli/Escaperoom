@@ -108,7 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829ecea60a4fa4140af08cad0b312b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item: {fileID: 0}
+  Item: {fileID: 7832196989206890264}
+  MouseImage: {fileID: 0}
   animationBool: 
   onUse:
     m_PersistentCalls:

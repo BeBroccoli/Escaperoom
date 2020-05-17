@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 674876983186211634}
   - component: {fileID: 8360549758043552004}
   - component: {fileID: 2826618850104182269}
+  - component: {fileID: 1800411892}
   m_Layer: 0
   m_Name: 3 Glass Showcase (2)
   m_TagString: Untagged
@@ -79,6 +80,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1800411892
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4541595255512772897}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.27000022, y: 0.0060000387, z: 0.4800007}
+  m_Center: {x: -0.00000012427564, y: -0.0058917906, z: 0.23999985}
 --- !u!1 &5001934702428494260
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +104,7 @@ GameObject:
   - component: {fileID: 8300460413324487591}
   - component: {fileID: 1038693773077041553}
   - component: {fileID: 6725746784752184680}
+  - component: {fileID: 35527359}
   m_Layer: 0
   m_Name: 2 Glass Showcase (1)
   m_TagString: Untagged
@@ -158,6 +173,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &35527359
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5001934702428494260}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.27000013, y: 0.0060001495, z: 0.48000064}
+  m_Center: {x: 0.00000005215406, y: -0.0058919634, z: 0.23999988}
 --- !u!1 &5389233954238545381
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +197,7 @@ GameObject:
   - component: {fileID: 8976024125945040886}
   - component: {fileID: 128978063932618176}
   - component: {fileID: 5978160954520537401}
+  - component: {fileID: 1391682090}
   m_Layer: 0
   m_Name: 1 Glass Showcase
   m_TagString: Untagged
@@ -237,6 +266,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1391682090
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5389233954238545381}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.27000013, y: 0.0060001495, z: 0.48000064}
+  m_Center: {x: 0.00000005215406, y: -0.005891844, z: 0.23999982}
 --- !u!114 &279266593810838028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,6 +399,7 @@ GameObject:
   - component: {fileID: 5711874048801499305}
   - component: {fileID: 3611783067470582431}
   - component: {fileID: 6999483304811507302}
+  - component: {fileID: 573990744}
   m_Layer: 0
   m_Name: Door to Showcase
   m_TagString: Untagged
@@ -425,6 +468,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &573990744
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8727974942613904058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.092246175, y: 3.1328092, z: 0.4800007}
+  m_Center: {x: 0.04612314, y: 1.5663993, z: 0.23999985}
 --- !u!1 &8867514239841567192
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,20 +722,50 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.333333
       objectReference: {fileID: 0}
+    - target: {fileID: 5695975530456152553, guid: d0021dd947ed2b34a8891dd192475fd6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8210754918817098718, guid: d0021dd947ed2b34a8891dd192475fd6,
         type: 3}
       propertyPath: m_Name
       value: Digit Code Lock
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210754918817098718, guid: d0021dd947ed2b34a8891dd192475fd6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210754918975576136, guid: d0021dd947ed2b34a8891dd192475fd6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8210754919110237015, guid: d0021dd947ed2b34a8891dd192475fd6,
         type: 3}
       propertyPath: m_Name
       value: Wheel Digit Left
       objectReference: {fileID: 0}
+    - target: {fileID: 8210754919110237015, guid: d0021dd947ed2b34a8891dd192475fd6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8210754919741839805, guid: d0021dd947ed2b34a8891dd192475fd6,
         type: 3}
       propertyPath: m_Name
       value: Wheel Digit Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210754919741839805, guid: d0021dd947ed2b34a8891dd192475fd6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210754920143756383, guid: d0021dd947ed2b34a8891dd192475fd6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2160373361808669383, guid: d0021dd947ed2b34a8891dd192475fd6, type: 3}

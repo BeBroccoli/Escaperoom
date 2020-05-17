@@ -8,6 +8,7 @@ public class LockControl : MonoBehaviour
     private int[] result, correctCombination;
     [SerializeField]
     GameObject Item;
+    GameObject Item2;
 
     private Animator Anim;
     public string animationBool;
@@ -23,6 +24,11 @@ public class LockControl : MonoBehaviour
     void OnEnable()
     {
         if (Item != null)
+        {
+            Anim = Item.GetComponent<Animator>();
+        }
+
+        if (Item2 != null)
         {
             Anim = Item.GetComponent<Animator>();
         }
