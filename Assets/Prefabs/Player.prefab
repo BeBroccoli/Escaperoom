@@ -269,5 +269,6 @@ MonoBehaviour:
   speed: 10
   gravity: -9.81
   canMove: 0
+  carrying: 0
   controller: {fileID: 0}
   cam: {fileID: 595862905831572343}

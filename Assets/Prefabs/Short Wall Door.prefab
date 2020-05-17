@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3690993807485849600}
   - component: {fileID: 6919079496466803961}
   m_Layer: 0
-  m_Name: SWDF
+  m_Name: Short Wall Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
