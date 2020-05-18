@@ -13,13 +13,16 @@ public class LockRotate : MonoBehaviour
 
     private bool coroutineAllowed;
 
-    private int numberShown; 
+    private int numberShown;
+
+    AudioSource Click;
 
 
     private void Start()
     {
         coroutineAllowed = true;
         numberShown = 0;
+        Click = GetComponent<AudioSource>();
     }
 
     private void OnMouseDown()
@@ -27,7 +30,9 @@ public class LockRotate : MonoBehaviour
         if (coroutineAllowed)
         {
             StartCoroutine("RotateWheel");
+            Click.Play(0);
         }
+        
     }
 
     private IEnumerator RotateWheel()
