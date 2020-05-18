@@ -13,12 +13,14 @@ public class LockControl : MonoBehaviour
     private Animator Anim;
     public string animationBool;
     public UnityEvent OpenCase;
+    AudioSource Open;
 
     private void Start()
     {
         result = new int[] { 0, 0, 0 };
         correctCombination = new int[] { 8, 2, 6 };
-        LockRotate.Rotated += CheckResults; 
+        LockRotate.Rotated += CheckResults;
+        Open = GetComponent<AudioSource>();
     }
 
     void OnEnable()
@@ -67,6 +69,7 @@ public class LockControl : MonoBehaviour
         {
             Debug.Log("Gottem");
             OpenCase.Invoke();
+            Open.Play(0);
         }
     }
 
