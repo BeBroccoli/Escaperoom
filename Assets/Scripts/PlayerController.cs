@@ -20,8 +20,10 @@ public class PlayerController : MonoBehaviour
     /////////////////////
     //PRIVATE VARIABLES//
     /////////////////////
-    private float pickupLength = 3;
+    private float pickupDistance = 3;
     private float smooth = 5f;
+    private float minCarryDist = 1;
+    private float maxCarryDist;
 
     private Vector3 movement;
     private Vector3 velocity;
@@ -80,13 +82,13 @@ public class PlayerController : MonoBehaviour
             //Use scrollwheel to push or pull the held object
             if (Input.GetAxis("Mouse ScrollWheel") > 0)
             {
-                pickupLength += 0.5f;
-                pickupLength = Mathf.Clamp(pickupLength, 2, 6);
+                pickupDistance += 0.5f;
+                pickupDistance = Mathf.Clamp(pickupDistance, minCarryDist, maxCarryDist);
             }
             else if (Input.GetAxis("Mouse ScrollWheel") < 0)
             {
-                pickupLength -= 0.5f;
-                pickupLength = Mathf.Clamp(pickupLength, 2, 6);
+                pickupDistance -= 0.5f;
+                pickupDistance = Mathf.Clamp(pickupDistance, minCarryDist, maxCarryDist);
             }
 
          
@@ -114,11 +116,13 @@ public class PlayerController : MonoBehaviour
             //Raycast and look for a collider with the physicsItem layer (layer 10)
             int layerMask = 1 << 10;
             RaycastHit hit;
-            if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, pickupLength, layerMask))
+            if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, pickupDistance, layerMask))
             {
                 //Debug.DrawRay(cam.transform.position, cam.transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                 carrying = true;
                 carriedObject = hit.rigidbody.gameObject;
+                pickupDistance = hit.distance;
+                maxCarryDist = hit.distance + 1;
             }
         }
     }
@@ -129,7 +133,7 @@ public class PlayerController : MonoBehaviour
         rb.useGravity = false;
         rb.freezeRotation = true;
         //Lerp with delta time for smooth movement on the carried object
-        o.transform.position = Vector3.Lerp(o.transform.position, cam.transform.position + cam.transform.forward * pickupLength, Time.deltaTime * smooth);
+        rb.position = Vector3.Lerp(rb.position, cam.transform.position + cam.transform.forward * pickupDistance, Time.deltaTime * smooth);
         //The held object had glitchy behaviour if hit by other objects while being held. To fix this we reset the velocity
         rb.velocity = new Vector3(0,0,0);
     }
@@ -140,7 +144,7 @@ public class PlayerController : MonoBehaviour
         carriedObject.GetComponent<Rigidbody>().useGravity = true;
         carriedObject.GetComponent<Rigidbody>().freezeRotation = false;
         carriedObject = null;
-        pickupLength = 3.0f;
+        pickupDistance = 3.0f;
     }
 
     private void rotateObject(GameObject o)
@@ -152,7 +156,7 @@ public class PlayerController : MonoBehaviour
 
         float turnX = Input.GetAxis("Mouse X");
         float turnY = Input.GetAxis("Mouse Y");
-        float torque = 1000;
+        float torque = 10000;
         rb.AddTorque(Vector3.up * torque * -turnX * Time.deltaTime);
         rb.AddTorque(Vector3.right * torque * turnY * Time.deltaTime);
     }
@@ -161,22 +165,15 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            //Raycast and look for a collider with the physicsItem layer (layer 10)
+            //Raycast and look for a collider with the usable layer (layer 11)
             int layerMask = 1 << 11;
             RaycastHit hit;
-            if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, pickupLength, layerMask))
+            if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, pickupDistance, layerMask))
             {
             
                 hit.transform.SendMessage("HitByRay");
-            }
-
-          
-
+            }       
         }
-
-
     }
-
-
 
 }
