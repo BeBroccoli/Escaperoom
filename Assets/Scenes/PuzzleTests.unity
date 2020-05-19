@@ -1019,11 +1019,6 @@ PrefabInstance:
       propertyPath: MouseImage
       value: 
       objectReference: {fileID: 2068547006}
-    - target: {fileID: 2841133756105215086, guid: b0842d698ec246f4d9d9095e17b5a75c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5648092211373632054, guid: b0842d698ec246f4d9d9095e17b5a75c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1083,11 +1078,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Short Wall Door
-      objectReference: {fileID: 0}
-    - target: {fileID: 8886650298376541794, guid: b0842d698ec246f4d9d9095e17b5a75c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0842d698ec246f4d9d9095e17b5a75c, type: 3}
