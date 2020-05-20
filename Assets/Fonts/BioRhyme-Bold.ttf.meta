@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 69da59ba1ae27354198b8eff4f65c580
+guid: 880c8dfeb4a4544459c95209cf100f27
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Arial
+  fontName: BioRhyme
   fontNames:
-  - Arial
+  - BioRhyme
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
