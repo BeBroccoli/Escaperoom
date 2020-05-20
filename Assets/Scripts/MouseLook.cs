@@ -10,16 +10,11 @@ public class MouseLook : MonoBehaviour
     public float sensitivity = 100f;
     public GameObject playerBody;
 
-
-
     /////////////////////
     //PRIVATE VARIABLES//
     ////////////////////
-    private float xRotation = 0f;
+    private float yRotation;
     private Transform playerTransform;
-
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -39,12 +34,12 @@ public class MouseLook : MonoBehaviour
         if(playerBody.GetComponent<PlayerController>().canMove)
         {
             //Negative y so the controls are not inverted
-            xRotation -= mouseY;
+            yRotation -= mouseY;
             //Clamp the y value so you can't rotate all the way around and break your neck
-            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+            yRotation = Mathf.Clamp(yRotation, -90f, 90f);
 
             //Rotate player
-            transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            transform.localRotation = Quaternion.Euler(yRotation, 0f, 0f);
             playerTransform.Rotate(Vector3.up * mouseX);
         }
     }
