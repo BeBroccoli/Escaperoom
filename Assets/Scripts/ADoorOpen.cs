@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ADoorOpen : MonoBehaviour
 {
-    AudioSource Audio;
+    public AudioClip Open;
 
     void Start()
     {
@@ -13,8 +13,9 @@ public class ADoorOpen : MonoBehaviour
 
     private void OnEnable()
     {
-        Audio = GetComponent<AudioSource>();
-        Audio.Play(0);
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = Open;
+        audio.Play();
     }
 
 

@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class ADoorClose : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public AudioClip Close;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void OnEnable()
     {
-        
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = Close;
+        audio.Play();
     }
+
 }
