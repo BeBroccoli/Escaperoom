@@ -9,11 +9,8 @@ public class PlayerController : MonoBehaviour
     ////////////////////
     public float speed = 5.0f;
     public float gravity = -9.81f;
-
     public bool canMove;
     public bool carrying;
-
-    public CharacterController controller;
     
     public Camera cam;
 
@@ -26,9 +23,9 @@ public class PlayerController : MonoBehaviour
     private float minCarryDist = 1;
     private float maxCarryDist;
 
-    private Vector3 movement;
     private Vector3 velocity;
     private GameObject carriedObject;
+    private CharacterController controller;
 
 
 
@@ -45,32 +42,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Player movement - limited by variable so we can control held objects
-        if(canMove)
-        {
-            float x = Input.GetAxis("Horizontal");
-            float z = Input.GetAxis("Vertical");
-
-            Vector3 move = transform.right * x + transform.forward * z;
-            controller.Move(move * speed * Time.deltaTime);
-        }
-
+        playerMovement();
     }
 
    
     void FixedUpdate()
     {
-        //Fake gravity because character controllers don't use physics
-        if(!controller.isGrounded)
-        {
-            velocity.y += gravity * Mathf.Pow(Time.deltaTime, 2);
-            controller.Move(velocity);
-        } else if (controller.isGrounded)
-        {
-            //Always apply a small force downwards since sometimes it bugs out and sets isGrounded before actually being on the ground
-            velocity.y = -1.0f;
-        }
-
 
         if (carrying)
         {
@@ -109,6 +86,34 @@ public class PlayerController : MonoBehaviour
             itemPickup();
         }
     }
+
+
+    private void playerMovement()
+    {
+        //Player movement - limited by variable so we can control held objects
+        if (canMove)
+        {
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
+
+            Vector3 move = transform.right * x + transform.forward * z;
+            controller.Move(move * speed * Time.deltaTime);
+        }
+
+        //Fake gravity because character controllers don't use physics
+        if (!controller.isGrounded)
+        {
+            velocity.y += gravity * Mathf.Pow(Time.deltaTime, 2);
+            controller.Move(velocity);
+        }
+        else if (controller.isGrounded)
+        {
+            //Always apply a small force downwards since sometimes it bugs out and sets isGrounded before actually being on the ground
+            velocity.y = -1.0f;
+        }
+    }
+
+
 
     private void itemPickup()
     {
