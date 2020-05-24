@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     ////////////////////
     public float speed = 5.0f;
     public float gravity = -9.81f;
+
     public bool canMove;
     public bool carrying;
 
