@@ -18,7 +18,7 @@ public class LockControl : MonoBehaviour
     private void Start()
     {
         result = new int[] { 0, 0, 0 };
-        correctCombination = new int[] { 8, 2, 6 };
+        correctCombination = new int[] { 7, 3, 5 };
         LockRotate.Rotated += CheckResults;
         Open = GetComponent<AudioSource>();
     }
