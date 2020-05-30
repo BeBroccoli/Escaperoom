@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4248565223224724181}
   m_Layer: 10
   m_Name: Exitkey
-  m_TagString: Untagged
+  m_TagString: puzzleItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4248565223224724183}
-  m_LocalRotation: {x: 0.72397614, y: 0.014323725, z: 0.013642227, w: 0.68954134}
+  m_LocalRotation: {x: 0.72397596, y: 0.014321862, z: 0.01364371, w: 0.6895416}
   m_LocalPosition: {x: 8.913, y: -1.058, z: -4.773}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
