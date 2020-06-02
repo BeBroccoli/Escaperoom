@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class BackToMenu : MonoBehaviour
 {
 
-    float timeLeft = 60.0f;
+    float timeLeft = 59.0f;
 
     void Update()
     {
