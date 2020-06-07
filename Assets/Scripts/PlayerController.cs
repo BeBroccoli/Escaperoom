@@ -115,6 +115,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    #region Pickup
 
     private void itemPickup()
     {
@@ -167,6 +168,8 @@ public class PlayerController : MonoBehaviour
         rb.AddTorque(Vector3.up * torque * -turnX * Time.deltaTime);
         rb.AddTorque(Vector3.right * torque * turnY * Time.deltaTime);
     }
+
+    #endregion
 
     private void useItem()
     {

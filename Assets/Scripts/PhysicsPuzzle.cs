@@ -8,13 +8,11 @@ public class PhysicsPuzzle : MonoBehaviour
     [SerializeField]
     GameObject Item;
 
-   
     public List<GameObject> questItemList;
     public int questProgress;
     public string puzzleName;
     public UnityEvent puzzleComplete;
     public string animationBool;
-
     
     private Animator Anim;
 
@@ -48,9 +46,6 @@ public class PhysicsPuzzle : MonoBehaviour
     {
         questCheck();
     }
-
-
-
 
     //Check to see if a/any puzzle items are inside the "goal"
     private void OnTriggerStay(Collider other)
